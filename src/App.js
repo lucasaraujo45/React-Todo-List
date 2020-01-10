@@ -5,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Button from '@material-ui/core/Button';
 import { Input } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 class App extends React.Component {
 
@@ -19,8 +23,10 @@ class App extends React.Component {
     return(
     <div className='container justify-content-center'>
       <h1>Todos</h1>
+      <Card>
       <AddTodo addTodoFn={this.addTodo}></AddTodo>
       <TodoList updateTodoFn={this.updateTodo} todos={this.state.todos}></TodoList>
+      </Card>
     </div>
     )
   }
